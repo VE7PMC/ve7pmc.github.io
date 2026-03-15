@@ -6,38 +6,53 @@
   <title>VE7PMC – Project Index</title>
 
   <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --text: #e6edf3;
+      --accent: #58a6ff;
+      --border: #30363d;
+    }
+
     body {
       font-family: system-ui, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f7fa;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      background: #1a3d6d;
-      color: white;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
       padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 600;
     }
 
     header p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     main {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
     }
 
     .project-list {
@@ -47,29 +62,31 @@
     }
 
     .project-list li {
-      background: white;
+      background: var(--panel);
       margin: 0.75rem 0;
       padding: 1rem 1.25rem;
       border-radius: 8px;
-      border: 1px solid #ddd;
-      transition: box-shadow 0.2s ease;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .project-list li:hover {
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
     a {
-      color: #1a3d6d;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #8b949e;
     }
   </style>
 </head>
@@ -77,20 +94,19 @@
 <body>
   <header>
     <h1>VE7PMC</h1>
-    <p>Project Index & GitHub Pages Landing Site</p>
+    <p>Project Index • GitHub Pages Landing Site</p>
   </header>
 
   <main>
     <h2>Projects</h2>
-    <p>Browse my public GitHub Pages projects below:</p>
+    <p>Browse my public GitHub Pages projects:</p>
 
     <ul class="project-list">
-      <li><a href="/project-one">Project One</a></li>
-      <li><a href="/project-two">Project Two</a></li>
-      <li><a href="/another-repo">Another Repo</a></li>
+      <li><a href="/TI-CUBE">TI‑CUBE</a></li>
+      <li><a href="/IRFT002-module">IRFT002‑module</a></li>
+      <li><a href="/RPi_RTC_Interface">RPi RTC Interface</a></li>
+      <li><a href="/AVR488">AVR488</a></li>
     </ul>
-
-    <p>You can add or remove items from this list anytime by editing <code>index.html</code>.</p>
   </main>
 
   <footer>
